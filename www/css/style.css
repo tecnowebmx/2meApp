@@ -1,1 +1,8 @@
-/* Empty. Add your own CSS if you like */
+.logo{
+	margin-top: 80px; 
+	text-align: center;
+	background-color: #f3f3f3;
+	border-top: 3px solid #000;
+	border-bottom: 3px solid #000;
+	margin-bottom: 30px;
+}
