@@ -6,3 +6,17 @@
 	border-bottom: 3px solid #000;
 	margin-bottom: 30px;
 }
+
+.buttons {
+	text-align: center;
+	margin-top: 50px;
+	padding: 20px;
+}
+
+.left {
+	float: left;
+}
+
+.right {
+	float: right;
+}
