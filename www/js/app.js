@@ -69,6 +69,16 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
       }
     })
 
+  .state('tab.magazzine', {
+    url: '/magazzine',
+    views: {
+      'tab-magazzine': {
+        templateUrl: 'templates/tab-magazzine.html',
+        controller: 'MagazzineCtrl'
+      }
+    }
+  })
+  
   .state('tab.account', {
     url: '/account',
     views: {

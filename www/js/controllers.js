@@ -25,4 +25,10 @@ angular.module('starter.controllers', [])
   $scope.settings = {
     enableFriends: true
   };
+})
+
+.controller('MagazzineCtrl', function($scope) {
+  $scope.settings = {
+    enableFriends: true
+  };
 });
