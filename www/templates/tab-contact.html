@@ -3,13 +3,13 @@
   	<div style="font-size: 23px;" class="padding">
   		Por favor llene los siguientes datos para ponerse en contacto con nosotros.
   	</div>
-  	<form name="contact-form" novalidate>
+  	<form name="contactForm">
 	    <div class="list">
 	    	<label class="item item-input">
-	    		<input type="text" placeholder="Nombre Completo" ng-model="name">
+	    		<input type="text" name="name" placeholder="Nombre Completo" ng-model="name" required>
 	    	</label>
 	    	<label class="item item-input">
-	    		<input type="email" placeholder="Email">
+	    		<input type="email" name="email" ng-model="email" ng-minlength="5" required placeholder="Email">
 	    	</label>
 	    	<label class="item item-input">
 	    		<input type="tel" placeholder="Teléfono">
@@ -19,7 +19,13 @@
 	    	</label>
 	    </div>
 	    <div class="padding">
-	    	<button type="submit" class="button button-block button-calm" ng-click="submit(name)">Enviar</button>
+	    	<p ng-show="!contactForm.$pristine && contactForm.name.$error.required">* El nombre es requerido</p>
+	    	<p ng-show="!contactForm.$pristine && contactForm.email.$error.required">* El correo electrónico es requerido</p>
+	    	<p ng-show="!contactForm.$pristine && contactForm.email.$error.email">Por favor introduce un correo electrónico válido</p>
+	    	<p ng-show=""></p>
+	    </div>
+	    <div class="padding">
+	    	<button type="submit" class="button button-block button-calm" ng-click="submit(name)" ng-disabled="!contactForm.$valid">Enviar</button>
 	    </div>
 	</form>
   </ion-content>
