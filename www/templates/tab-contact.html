@@ -6,7 +6,7 @@
   	<form name="contactForm">
 	    <div class="list">
 	    	<label class="item item-input">
-	    		<input type="text" name="name" placeholder="Nombre Completo" ng-model="name" required>
+	    		<input type="text" name="name" placeholder="Nombre Completo" ng-model="name" required ng-class="{ warning: contactForm.name.$error.required }">
 	    	</label>
 	    	<label class="item item-input">
 	    		<input type="email" name="email" ng-model="email" ng-minlength="5" required placeholder="Email">
@@ -18,10 +18,10 @@
 	    		<textarea placeholder="Comentarios"></textarea
 	    	</label>
 	    </div>
-	    <div class="padding">
+	    <div style="font-size: 18px;" class="padding">
 	    	<p ng-show="!contactForm.$pristine && contactForm.name.$error.required">* El nombre es requerido</p>
 	    	<p ng-show="!contactForm.$pristine && contactForm.email.$error.required">* El correo electrónico es requerido</p>
-	    	<p ng-show="!contactForm.$pristine && contactForm.email.$error.email">Por favor introduce un correo electrónico válido</p>
+	    	<p ng-show="!contactForm.$pristine && contactForm.email.$error.email">Por favor introduce un email válido</p>
 	    	<p ng-show=""></p>
 	    </div>
 	    <div class="padding">
