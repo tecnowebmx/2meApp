@@ -78,6 +78,10 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
       }
     }
   })
+
+  .state('sendEmail', {
+    url: '/sendEmail'
+  })
   
   .state('tab.contact', {
     url: '/contact',

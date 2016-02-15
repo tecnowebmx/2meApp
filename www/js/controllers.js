@@ -21,9 +21,25 @@ angular.module('starter.controllers', [])
   $scope.chat = Chats.get($stateParams.chatId);
 })
 
-.controller('ContactCtrl', function($scope) {
-  $scope.submit = function(name){
-    alert("thanks " + name);
+.controller('ContactCtrl', function($scope, $http, $state) {
+  $scope.formData = {};
+
+  $scope.submit = function(){
+    $http({
+      method : 'POST',
+      url    : 'http://2me.app/www/sendEmail.php',
+      data   : $scope.formData,
+      headers: {'Content-Type': 'application/x-www-form-urlencoded'}
+    })
+    .success(function(data){
+      if(data.errors){
+        $scope.errorName = data.errors.name;
+        $scope.errorEmail = data.errors.email;
+      } else {
+        $scope.message = data.message;
+        $state.go('list');
+      }
+    });
   };
 })
 
