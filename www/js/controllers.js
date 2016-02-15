@@ -21,7 +21,7 @@ angular.module('starter.controllers', [])
   $scope.chat = Chats.get($stateParams.chatId);
 })
 
-.controller('AccountCtrl', function($scope) {
+.controller('ContactCtrl', function($scope) {
   $scope.submit = function(name){
     alert("thanks " + name);
   };
