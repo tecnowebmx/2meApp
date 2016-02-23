@@ -21,6 +21,10 @@ angular.module('starter.controllers', [])
   $scope.chat = Chats.get($stateParams.chatId);
 })
 
+.controller('ZoneCtrl', function($scope) {
+ 
+})
+
 .controller('ContactCtrl', function($scope, $http, $state) {
   $scope.formData = {};
 
