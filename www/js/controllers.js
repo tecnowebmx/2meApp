@@ -43,7 +43,7 @@ angular.module('starter.controllers', [])
   };
 })
 
-.controller('MagazzineCtrl', function($scope, $ionicSlideBoxDelegate) {
+.controller('MagazzineCtrl', function($scope) {
   $scope.swiper = {};
  
     $scope.onReadySwiper = function (swiper) {
