@@ -31,7 +31,7 @@ angular.module('starter.controllers', [])
   $scope.submit = function(){
     $http({
       method : 'POST',
-      url    : 'http://2me.app/www/sendEmail.php',
+      url    : 'http://2me.app/api/sendEmail.php',
       data   : $scope.formData,
       headers: {'Content-Type': 'application/x-www-form-urlencoded'}
     })
@@ -41,7 +41,8 @@ angular.module('starter.controllers', [])
         $scope.errorEmail = data.errors.email;
       } else {
         $scope.message = data.message;
-        $state.go('list');
+        $scope.formData = "";
+        $state.go('tab.contact');
       }
     });
   };
