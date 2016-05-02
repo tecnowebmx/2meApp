@@ -25,6 +25,10 @@ angular.module('starter.controllers', [])
  
 })
 
+.controller('BussinessDetailCtrl', function($scope, $stateParams, Categories) {
+  
+})
+
 .controller('ContactCtrl', function($scope, $http, $state) {
   $scope.formData = {};
 

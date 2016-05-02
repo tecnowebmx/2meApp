@@ -64,7 +64,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
         }
       }
     })
-    .state('tab.directory-detail', {
+  .state('tab.directory-detail', {
       url: '/directory/:categoryId',
       views: {
         'tab-directory': {
@@ -74,7 +74,17 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
       }
     })
 
-    .state('tab.zones', {
+  .state('tab.detail', {
+      url: '/detail',
+      views: {
+        'tab-directory': {
+          templateUrl: 'templates/details.html',
+          controller: 'BussinessDetailCtrl'
+        }
+      }
+    })
+
+  .state('tab.zones', {
       url: '/zones',
       views: {
         'tab-zones': {
