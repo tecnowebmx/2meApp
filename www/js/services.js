@@ -7,48 +7,48 @@ angular.module('starter.services', [])
   var categories = [{
     id: 0,
     name: 'Todo para tu Viaje',
-    lastText: 'You on your way?',
-    face: 'img/ADOC.jpg'
+    bussinessName: 'ADOC',
+    lastText: 'Nuestros Servicios: Vuelos, Hoteles, Autobuses, Renta de Autos, Paquetes, Charter, Parques, Disney, Las Vegas, Europa, Graduaciones, Bodas, Lunas de Miel, etc.',
+    face: 'img/ADOC.jpg',
+    web: 'www.adocagency.com',
+    mail: 'escobedo@adocagency.com.mx',
+    tel: '1521 - 0583'
   }, {
     id: 1,
     name: 'Educativo',
-    lastText: 'Hey, it\'s me',
-    face: 'img/max.png'
-  }, {
-    id: 2,
-    name: 'Hogar',
-    lastText: 'I should buy a boat',
-    face: 'img/adam.jpg'
-  }, {
-    id: 3,
-    name: 'Foto y Video',
-    lastText: 'Look at my mukluks!',
-    face: 'img/perry.png'
+    bussinessName: 'Tecno Web Centro de Capacitación',
+    lastText: 'Aprender HTML 5, CSS 3, Javascript, PHP desde cero con el método de trabajo creado por nuestros profesores expertos en el diseño web, la codificación, los negocios y mucho más. Nuestros métodos se actualizan continuamente con lo último en tecnología web para estar constantemente actualizados.',
+    face: 'img/tecnoweb.jpg',
+    web: 'www.tecnologiasdeinternet.com',
+    mail: 'cursos@tecnologiasdeinternet.com',
+    tel: '2261 - 8117'
   }, {
     id: 4,
     name: 'Muebles, Ropa',
-    lastText: 'This is wicked good ice cream.',
-    face: 'img/mike.png'
-  }, {
-    id: 6,
-    name: 'Salud & Belleza',
-    lastText: 'Look at my mukluks!',
-    face: 'img/perry.png'
+    bussinessName: 'Glamsi',
+    lastText: 'En Glamsi encuentras de todo para toda la familia. Ropa, Accesorios, Moda, Belleza, Decoración para el hogar, Zapatos, etc.',
+    face: 'img/glamsi.jpg',
+    web: 'N/A',
+    mail: 'glamsi@gmail.com',
+    tel: '811 - 008 - 8578'
   }, {
     id: 7,
     name: 'Todo para tu Evento',
-    lastText: 'Look at my mukluks!',
-    face: 'img/perry.png'
+    bussinessName: 'Rockolas y Karaoke',
+    lastText: 'Lo mejor en karaoke, sonido y videos. Más de 70 mil canciones en todos sus géneros para que cantes y bailes. Completamente actualizadas.',
+    face: 'img/rockola.jpg',
+    web: 'N/A',
+    mail: 'rockolas_escobedo@gmail.com',
+    tel: '811 - 008 - 8578'
   }, {
     id: 8,
     name: 'Bebés',
-    lastText: 'Look at my mukluks!',
-    face: 'img/perry.png'
-  }, {
-    id: 9,
-    name: 'Moda',
-    lastText: 'Look at my mukluks!',
-    face: 'img/perry.png'
+    bussinessName: 'Bebé a la Moda',
+    lastText: '10% de descuento en todas tus compras. *Aplican restricciones!',
+    face: 'img/bebeModa.jpg',
+    web: 'N/A',
+    mail: 'bebealamoda@gmail.com',
+    tel: '1952 - 4988'
   }];
 
   return {

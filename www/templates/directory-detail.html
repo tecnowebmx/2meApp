@@ -6,19 +6,15 @@
 -->
 <ion-view view-title="{{category.name}}">
   <ion-content class="padding">
-    <div class="list">
-
-      <a class="item item-thumbnail-left" href="#/tab/detail">
-        <img ng-src="{{category.face}}">
-          <h2>{{category.name}}</h2>
-          <p>{{ category.lastText}}</p>
-      </a>
-
-      <a class="item item-thumbnail-left" href="#">
-        <img ng-src="{{category.face}}">
-          <h2>{{category.name}}</h2>
-          <p>{{ category.lastText}}</p>
-      </a>
+    <div class="list card">
+      <div class="item item-body">
+        <img class="full-image" ng-src="{{category.face}}">
+          <h2 class="center">{{category.bussinessName}}</h2>
+            <p>{{ category.lastText}}</p>
+            <p>Web: {{ category.web }}</p>
+            <p>Email: {{ category.mail }}</p>
+            <p>Teléfono: {{ category.tel }}</p>
+      </div>
     </div>
   </ion-content>
 </ion-view>
