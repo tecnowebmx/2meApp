@@ -89,6 +89,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
       views: {
         'tab-zones': {
           templateUrl: 'templates/tab-zones.html',
+          controller: 'ZoneCtrl'
         }
       }
     })

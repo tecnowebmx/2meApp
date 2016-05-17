@@ -21,8 +21,15 @@ angular.module('starter.controllers', [])
   $scope.category = Categories.get($stateParams.categoryId);
 })
 
-.controller('ZoneCtrl', function($scope) {
- 
+.controller('ZoneCtrl', function($scope, $http) {
+  $scope.zonas = [];
+
+  $http.get('http://2me.app/zonas/api')
+    .success(function(zonas){
+      $scope.zonas = zonas;
+      console.log($scope.zonas);
+      
+    });
 })
 
 .controller('BussinessDetailCtrl', function($scope, $stateParams, Categories) {
