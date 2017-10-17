@@ -2,7 +2,7 @@ angular.module('starter.controllers', [])
 
 .controller('DashCtrl', function($scope) {})
 
-.controller('DirectoryCtrl', function($scope, Categories) {
+.controller('DirectoryCtrl', function($scope, $http) {
   // With the new view caching in Ionic, Controllers are only called
   // when they are recreated or on app start, instead of every page change.
   // To listen for when this page is active (for example, to refresh data),
@@ -11,10 +11,19 @@ angular.module('starter.controllers', [])
   //$scope.$on('$ionicView.enter', function(e) {
   //});
 
-  $scope.categories = Categories.all();
+  /*$scope.categories = Categories.all();
   $scope.remove = function(category) {
     Categories.remove(category);
-  };
+  };*/
+
+  $scope.categorias = [];
+
+  $http.get('http://2me.app/categorias/api')
+    .success(function(categorias){
+      $scope.categorias = categorias;
+      console.log($scope.categorias);
+      
+    });
 })
 
 .controller('DirectoryDetailCtrl', function($scope, $stateParams, Categories) {
